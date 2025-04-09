@@ -16,8 +16,8 @@ with open("books.csv", mode="w", newline="", encoding="utf-8") as file:
     writer.writerow(["Title", "Price", "Availability"])
 
 # Step 4: Loop through and write data
-for book in books:
-    title = book.h3.a['title']
-    price = book.find("p", class_="price_color").text
-    availability = book.find("p", class_="instock availability").text.strip()
-    writer.writerow([title, price, availability])
+    for book in books:
+        title = book.h3.a['title']
+        price = book.find("p", class_="price_color").text
+        availability = book.find("p", class_="instock availability").text.strip()
+        writer.writerow([title, price, availability])
